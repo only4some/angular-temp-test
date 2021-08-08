@@ -16,6 +16,8 @@ ngAfterContentInit(){
 }
 ngAfterViewInit(){
  let fact= this.cfr.resolveComponentFactory(MessageComponent);
+ let comp=fact.create(this.inject);
+ this.ctn.insert(comp.hostView);
 }
   name = 'Angular ' + VERSION.major;
 }
