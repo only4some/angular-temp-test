@@ -17,7 +17,7 @@ constructor(private inject:Injector,private cfr:ComponentFactoryResolver){}
 ngAfterContentInit(){
 
 }
-loadTemp=()=>{
+loadtemp=()=>{
   alert('load temp');
   let vw=this.tmp.createEmbeddedView(null);
   this.dyna.insert(vw);
