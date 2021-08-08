@@ -5,3 +5,6 @@
 <addhoc><h3>i am addhoc</h3></addhoc>
 <a href="#" (click)="loadComp()">LoadCompp</a>
 <ng-container #ctn></ng-container>
+<ng-container [ngTemplateOutlet]="tmp"></ng-container>
+
+<ng-template #tmp><h1>i am dynamic template</h1></ng-template>
