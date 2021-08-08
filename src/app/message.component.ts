@@ -1,5 +1,7 @@
-import{Component} from '@angular/core';
+import{Component,Input} from '@angular/core';
 @Component({selector:'msg',
-template:'<h2>hey i am static html</h2>'
+template:'<h2>hey i am dynami html:{{message}}</h2>'
 })
-export class MessageComponent{}
+export class MessageComponent{
+  @Input("messag") message;
+}
