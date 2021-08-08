@@ -3,5 +3,5 @@ import{Component,Input} from '@angular/core';
 template:'<h2>hey i am dynami html:{{message}}</h2>'
 })
 export class MessageComponent{
-  @Input("messag") message;
+  @Input("message") message;
 }
