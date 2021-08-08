@@ -1,4 +1,4 @@
-import { Component, VERSION,ViewChild, ViewContainerRef} from '@angular/core';
+import { Component, VERSION,ViewChild, ViewContainerRef,AfterViewInit,Injector,AfterContentInit,ComponentFactoryResolver} from '@angular/core';
 import {MessageComponent} from './message.component';
 
 @Component({
@@ -6,9 +6,17 @@ import {MessageComponent} from './message.component';
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
+export class AppComponent implements AfterViewInit,AfterContentInit  {
 @ViewChild("ctn",{read:ViewContainerRef})ctn:ViewContainerRef;
 
+constructor(private inject:Injector,private cfr:ComponentFactoryResolver){}
+
+ngAfterContentInit(){
+
+}
+ngAfterViewInit(){
+ let fact= this.cfr.resolveComponentFactory(MessageComponent);
+}
   name = 'Angular ' + VERSION.major;
 }
 
