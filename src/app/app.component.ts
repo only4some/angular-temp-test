@@ -19,7 +19,8 @@ ngAfterContentInit(){
 }
 loadTemp=()=>{
   alert('load temp');
-  this.dyna.insert();
+  let vw=this.tmp.createEmbeddedView(null);
+  this.dyna.insert(vw);
 }
 ngAfterViewInit(){
  let fact= this.cfr.resolveComponentFactory(MessageComponent);
