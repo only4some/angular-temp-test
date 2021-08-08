@@ -9,7 +9,7 @@ import {MessageComponent} from './message.component';
 export class AppComponent implements AfterViewInit,AfterContentInit  {
 @ViewChild("ctn",{read:ViewContainerRef})ctn:ViewContainerRef;
 comp:any;
-@ViewChild("dyn",{read:ViewContainerRef}) dyna:ViewContainerRef;
+@ViewChild("dyna",{read:ViewContainerRef}) dyna:ViewContainerRef;
 @ViewChild("tmp") tmp:TemplateRef<any>;
 
 constructor(private inject:Injector,private cfr:ComponentFactoryResolver){}
