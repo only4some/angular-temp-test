@@ -22,7 +22,7 @@ ngAfterViewInit(){
 }
 loadComp=()=>{
   alert('im loadFactory');
-  this.comp.hostView.message="salud";
+  this.comp.instance.message="salud";
 this.ctn.insert(this.comp.hostView);
 }
   name = 'Angular ' + VERSION.major;
