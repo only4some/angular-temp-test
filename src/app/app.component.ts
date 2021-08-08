@@ -16,6 +16,11 @@ constructor(private inject:Injector,private cfr:ComponentFactoryResolver){}
 
 ngAfterContentInit(){
 
+  //alert("content init");
+
+}
+ngDoViewChecked(){
+  alert("viee checked");
 }
 loadtemp=()=>{
   alert('load temp');
