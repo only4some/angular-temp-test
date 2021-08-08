@@ -1,4 +1,4 @@
-import { Component, VERSION,ViewChild, ViewContainerRef,AfterViewInit,Injector,AfterContentInit,ComponentFactoryResolver} from '@angular/core';
+import { Component, VERSION,ViewChild, ViewContainerRef,AfterViewInit,Injector,TemplateRef,AfterContentInit,ComponentFactoryResolver} from '@angular/core';
 import {MessageComponent} from './message.component';
 
 @Component({
@@ -9,11 +9,17 @@ import {MessageComponent} from './message.component';
 export class AppComponent implements AfterViewInit,AfterContentInit  {
 @ViewChild("ctn",{read:ViewContainerRef})ctn:ViewContainerRef;
 comp:any;
+@ViewChild("dyn",{read:ViewContainerRef}) dyna:ViewContainerRef;
+@ViewChild("tmp") tmp:TemplateRef<any>;
 
 constructor(private inject:Injector,private cfr:ComponentFactoryResolver){}
 
 ngAfterContentInit(){
 
+}
+loadTemp=()=>{
+  alert('load temp');
+  this.dyna.insert();
 }
 ngAfterViewInit(){
  let fact= this.cfr.resolveComponentFactory(MessageComponent);
