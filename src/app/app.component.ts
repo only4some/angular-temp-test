@@ -8,6 +8,7 @@ import {MessageComponent} from './message.component';
 })
 export class AppComponent implements AfterViewInit,AfterContentInit  {
 @ViewChild("ctn",{read:ViewContainerRef})ctn:ViewContainerRef;
+comp:any;
 
 constructor(private inject:Injector,private cfr:ComponentFactoryResolver){}
 
@@ -16,8 +17,12 @@ ngAfterContentInit(){
 }
 ngAfterViewInit(){
  let fact= this.cfr.resolveComponentFactory(MessageComponent);
- let comp=fact.create(this.inject);
- this.ctn.insert(comp.hostView);
+ this.comp=fact.create(this.inject);
+ //this.ctn.insert(comp.hostView);
+}
+loadComp=()=>{
+  alert('im loadFactory');
+this.ctn.insert(this.comp.hostView);
 }
   name = 'Angular ' + VERSION.major;
 }
