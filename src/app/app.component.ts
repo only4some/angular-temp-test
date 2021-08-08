@@ -25,6 +25,10 @@ loadComp=()=>{
   this.comp.instance.message="salud";
 this.ctn.insert(this.comp.hostView);
 }
-  name = 'Angular ' + VERSION.major;
+  ngDestroy(){
+    this.ctn.clear();
+  }
+
+name = 'Angular ' + VERSION.major;
 }
 
