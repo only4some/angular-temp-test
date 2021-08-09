@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import{AddhocComponent} from './addhoc.component';
 import {MessageComponent} from './message.component';
+import {ChildComponent} from './child.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent,AddhocComponent  ],
+  declarations: [ AppComponent, HelloComponent,AddhocComponent ,ChildComponent],
   bootstrap:    [ AppComponent ],
   entryComponents:[MessageComponent]
 })
