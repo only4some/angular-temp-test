@@ -7,6 +7,6 @@ export class ChildComponent implements AfterContentInit
 {
   @ContentChild('h1') h;
   ngAfterContentInit(){
-alert(this.h);
+alert('ng thiscont',this.h);
   }
 }
